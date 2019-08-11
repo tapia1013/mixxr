@@ -1,0 +1,549 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap');
+
+html,
+body {
+  background: #253141;
+  font-family: 'Montserrat', sans-serif;
+  background-image: linear-gradient(
+    to bottom, 
+    rgba(37,49,65,0.7) 0%,
+    #253141 80%,
+    #253141 100%
+    ), 
+    url("https://assets1.ignimgs.com/2019/03/27/rankingapex-1553715503676.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+header .left-menu {
+  display: flex;
+}
+
+header .left-menu .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+header .left-menu .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+}
+
+header .left-menu .menu a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+header .right-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .right-menu .language {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 0 60px 0 0;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+header .right-menu .signin {
+  background: #0375d5;
+  border-radius: 2px;
+  padding: 10px 20px;
+  font-size: .85rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin: -0 auto;
+}
+
+.section-title{
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+#featured {
+  padding: 50px 0 50px;
+}
+
+#featured .videos-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr 620px 2fr 1fr;
+  grid-gap: 10px;
+}
+
+#featured .videos-section .video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#featured .videos-section .video .image:nth-child(1) {
+  width: 100%;
+  height: 300px;
+  background: url("https://i.ytimg.com/vi/uHIbVvFTSYU/maxresdefault.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#featured .videos-section .video.center {
+  width: 100%;
+  height: 349px;
+  background: red;
+}
+
+#featured .videos-section .video.center .image {
+  width: 100%;
+  height: 349px;
+  background: url("https://i.ytimg.com/vi/GT6ushVNkGY/maxresdefault.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  border: 2px solid #00b4f0;
+}
+
+#featured .videos-section .video:nth-child(1) .image,
+#featured .videos-section .video:nth-child(5) .image
+ {
+  position: relative;
+}
+
+#featured .videos-section .video:nth-child(1) .image .arrow{
+  height: 100%;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#featured .videos-section .video:nth-child(1) .image .arrow:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+#featured .videos-section .video:nth-child(5) .image .arrow{
+  height: 100%;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  right: 0;
+}
+
+#featured .videos-section .video:nth-child(5) .image .arrow:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+#featured .videos-section .video:nth-child(1) .image .arrow .fa,
+#featured .videos-section .video:nth-child(5) .image .arrow .fa {
+  font-size: 3rem;
+  color: #00b4f0;
+}
+
+#featured .dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#featured .dots .circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#featured .dots .circles .circle {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#featured .dots .circles .circle .background-color {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+  transition: all 0.2s ease-in-out;
+}
+
+#featured .dots .circles .circle:hover .background-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #00b4f0;
+}
+
+#featured .dots .circles .circle.active  .background-color {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #00b4f0;
+}
+
+#top-games {
+  padding: 50px 0;
+}
+
+#top-games .games {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+
+#top-games .games .game {
+  background: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Apex_legends_cover.jpg/220px-Apex_legends_cover.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#top-games .games .game .info {
+  background: #253041;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+}
+
+#top-games .games .game:hover .info {
+  background: #313f55;
+  cursor: pointer;
+}
+
+#top-games .games .game .info .title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#top-games .games .game .info .views {
+  font-weight: 300;
+  color: #8c919d;
+  font-size: 0.9rem;
+}
+
+#top-games .games .game .info .views .fa {
+  margin-right: 5px;
+}
+
+/* game2 */
+#top-games .games .game2{
+  background: url("https://www.nintendoenthusiast.com/wp-content/uploads/2019/01/New-Super-Mario-Bros-U-Deluxe.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#top-games .games .game2 .info {
+  background: #253041;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+}
+
+#top-games .games .game2:hover .info {
+  background: #313f55;
+  cursor: pointer;
+}
+
+#top-games .games .game2 .info .title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/**/
+
+#top-games .games .game .info .views {
+  font-weight: 300;
+  color: #8c919d;
+  font-size: 0.9rem;
+}
+
+#top-games .games .game .info .views .fa {
+  margin-right: 5px;
+}
+
+/* game3 */
+#top-games .games .game3{
+  background: url("https://c1-ebgames.eb-cdn.com.au/merchandising/images/packshots/9c4371f638ed44d0bfe3ff40346c7c2d_Large.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#top-games .games .game2 .info {
+  background: #253041;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+}
+
+#top-games .games .game2:hover .info {
+  background: #313f55;
+  cursor: pointer;
+}
+
+#top-games .games .game2 .info .title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/**/
+
+#top-games .games .game .info .views {
+  font-weight: 300;
+  color: #8c919d;
+  font-size: 0.9rem;
+}
+
+#top-games .games .game .info .views .fa {
+  margin-right: 5px;
+}
+
+
+/* game4 */
+#top-games .games .game4{
+  background: url("http://images.pushsquare.com/19afe9bfffe5d/dayz-cover.cover_large.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#top-games .games .game4 .info {
+  background: #253041;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+}
+
+#top-games .games .game4:hover .info {
+  background: #313f55;
+  cursor: pointer;
+}
+
+#top-games .games .game4 .info .title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/**/
+
+#top-games .games .game4 .info .views {
+  font-weight: 300;
+  color: #8c919d;
+  font-size: 0.9rem;
+}
+
+#top-games .games .game4 .info .views .fa {
+  margin-right: 5px;
+}
+
+/* game5 */
+#top-games .games .game4{
+  background: url("https://upload.wikimedia.org/wikipedia/en/thumb/4/44/Red_Dead_Redemption_II.jpg/220px-Red_Dead_Redemption_II.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#top-games .games .game4 .info {
+  background: #253041;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+}
+
+#top-games .games .game4:hover .info {
+  background: #313f55;
+  cursor: pointer;
+}
+
+#top-games .games .game4 .info .title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/**/
+
+#top-games .games .game4 .info .views {
+  font-weight: 300;
+  color: #8c919d;
+  font-size: 0.9rem;
+}
+
+#top-games .games .game4 .info .views .fa {
+  margin-right: 5px;
+}
+
+
+/* game5 */
+#top-games .games .game5{
+  background: url("https://images.g2a.com/newlayout/323x433/1x1x0/e44b30b2eaaf/5b0ba9daae653a72294c4113");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#top-games .games .game5 .info {
+  background: #253041;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+}
+
+#top-games .games .game5:hover .info {
+  background: #313f55;
+  cursor: pointer;
+}
+
+#top-games .games .game5 .info .title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/**/
+
+#top-games .games .game5 .info .views {
+  font-weight: 300;
+  color: #8c919d;
+  font-size: 0.9rem;
+}
+
+#top-games .games .game5 .info .views .fa {
+  margin-right: 5px;
+}
+
+/* game6 */
+#top-games .games .game6{
+  background: url("https://cdn.vox-cdn.com/thumbor/tEv_UXpwpIdUuS-kQKRh-wzutGA=/104x0:3500x1778/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/11371207/Screen_Shot_2018-05-23_at_4.05.26_PM.0.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#top-games .games .game6 .info {
+  background: #253041;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+}
+
+#top-games .games .game6:hover .info {
+  background: #313f55;
+  cursor: pointer;
+}
+
+#top-games .games .game6 .info .title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/**/
+
+#top-games .games .game6 .info .views {
+  font-weight: 300;
+  color: #8c919d;
+  font-size: 0.9rem;
+}
+
+#top-games .games .game6 .info .views .fa {
+  margin-right: 5px;
+}
